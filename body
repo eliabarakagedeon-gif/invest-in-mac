@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matunda ya Afrika Company - Transformer l'or des champs en or liquide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Variables de couleur inspirées de l'artisanat africain */
+        :root {
+            --primary-yellow: #E6B800;
+            --dark-yellow: #CC9900;
+            --primary-green: #4A7C59;
+            --light-green: #6B9F7F;
+            --primary-brown: #6B4423;
+            --light-brown: #A0785A;
+            --cream: #FFF8E1;
+            --dark-text: #333333;
+            --light-text: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--primary-green);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            color: var(--light-text);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-yellow);
+        }
+        
+        .language-toggle {
+            background-color: transparent;
+            border: 1px solid var(--light-text);
+            color: var(--light-text);
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://z-cdn-media.chatglm.cn/files/72de5450-c2a5-4105-8f9a-83eb9541b05d_1763158333554%20%281%29.jpg?auth_key=1864048031-f6a7621f57fe4f56ae5455ac0bfc2316-0-9e9bacd2c0f6ee97a8a51407cef79a06');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--light-text);
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .cta-button {
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 1.1rem;
+        }
+        
+        .cta-primary {
+            background-color: var(--primary-yellow);
+            color: var(--dark-text);
+        }
+        
+        .cta-primary:hover {
+            background-color: var(--dark-yellow);
+            transform: translateY(-3px);
+        }
+        
+        .cta-secondary {
+            background-color: transparent;
+            color: var(--light-text);
+            border: 2px solid var(--light-text);
+        }
+        
+        .cta-secondary:hover {
+            background-color: var(--light-text);
+            color: var(--primary-green);
+        }
+        
+        /* Problem Section */
+        .problem {
+            padding: 80px 0;
+            background-color: var(--cream);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: var(--primary-green);
+        }
+        
+        .problem-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .problem-text {
+            flex: 1;
+        }
+        
+        .problem-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-brown);
+        }
+        
+        .problem-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .problem-visual {
+            flex: 1;
+            background-color: var(--light-green);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chart-container {
+            height: 300px;
+            position: relative;
+        }
+        
+        /* Solution Section */
+        .solution {
+            padding: 80px 0;
+            background-color: var(--light-text);
+        }
+        
+        .solution-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .solution-visual {
+            flex: 1;
+        }
+        
+        .product-showcase {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .product-card {
+            background-color: var(--cream);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 15px;
+        }
+        
+        .product-info h4 {
+            margin-bottom: 10px;
+            color: var(--primary-green);
+        }
+        
+        .solution-text {
+            flex: 1;
+            color: var(--dark-text);
+        }
+        
+        .solution-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-green);
+        }
+        
+        .solution-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .advantages {
+            margin-top: 30px;
+        }
+        
+        .advantage-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .advantage-item i {
+            color: var(--primary-yellow);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        
+        /* Investment Opportunity Section */
+        .investment {
+            padding: 80px 0;
+            background-color: var(--cream);
+        }
+        
+        .investment-content {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        
+        .investment-details {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .investment-text {
+            flex: 1;
+        }
+        
+        .investment-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-brown);
+        }
+        
+        .investment-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .investment-visual {
+            flex: 1;
+        }
+        
+        .funding-breakdown {
+            background-color: var(--light-green);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .funding-item {
+            margin-bottom: 20px;
+        }
+        
+        .funding-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .funding-bar {
+            height: 20px;
+            background-color: var(--primary-yellow);
+            border-radius: 10px;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .metric-card {
+            background-color: var(--light-text);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+        
+        .metric-label {
+            font-size: 1.1rem;
+        }
+        
+        /* Roadmap Section */
+        .roadmap {
+            padding: 80px 0;
+            background-color: var(--light-text);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-green);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: var(--primary-yellow);
+            border: 4px solid var(--primary-green);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .right::after {
+            left: -16px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--cream);
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary-green);
+        }
+        
+        /* Contact & Payment Section */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--cream);
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-brown);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item i {
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            width: 30px;
+        }
+        
+        .payment-options {
+            flex: 1;
+        }
+        
+        .payment-options h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-brown);
+        }
+        
+        .payment-card {
+            background-color: var(--light-text);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .payment-card h4 {
+            margin-bottom: 15px;
+            color: var(--primary-green);
+        }
+        
+        .payment-card p {
+            margin-bottom: 20px;
+        }
+        
+        .slogan {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 50px;
+            color: var(--primary-green);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-green);
+            color: var(--light-text);
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 15px;
+            color: var(--primary-yellow);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: var(--light-text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary-yellow);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-brown);
+            color: var(--light-text);
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-yellow);
+            color: var(--dark-text);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--light-text);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-question {
+            background-color: var(--primary-green);
+            color: var(--light-text);
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .faq-question:hover {
+            background-color: var(--light-green);
+        }
+        
+        .faq-question h3 {
+            margin: 0;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+        
+        .faq-answer {
+            background-color: var(--cream);
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .faq-icon.active {
+            transform: rotate(180deg);
+        }
+        
+        /* Download Pitch Deck Section */
+        .download {
+            padding: 80px 0;
+            background-color: var(--cream);
+            text-align: center;
+        }
+        
+        .download-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .download-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-green);
+        }
+        
+        .download-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .problem-content, .solution-content, .investment-details, .contact-content {
+                flex-direction: column;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid var(--light-text);
+                border-width: 10px 10px 10px 0;
+                border-color: transparent var(--light-text) transparent transparent;
+            }
+            
+            .left::after, .right::after {
+                left: 21px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .product-showcase {
+                grid-template-columns: 1fr;
+            }
+            
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="https://z-cdn-media.chatglm.cn/files/b262086c-49d6-45b2-a9d5-ac84b90504b2_Logo%20MAC-DRC.jpg?auth_key=1864048031-c19baef343ee4c87b0057405a5606b37-0-c9b9c1be641f999ece3876fa18c0aa20" alt="MAC Logo">
+                <div class="logo-text">Matunda ya Afrika Company</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#problem">Le Problème</a></li>
+                <li><a href="#solution">Notre Solution</a></li>
+                <li><a href="#investment">Opportunité</a></li>
+                <li><a href="#roadmap">Feuille de Route</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><button class="language-toggle" onclick="toggleLanguage()">EN</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>Matunda ya Afrika Company : Transformer l'or des champs en or liquide.</h1>
+            <p>La première production semi-industrielle d'huile d'arachide pure à Bukavu, RDC.</p>
+            <div class="cta-buttons">
+                <a href="https://www.paypal.com/ncp/payment/USHYKP6TWRM5Q" class="cta-button cta-primary">Investir dans le projet</a>
+                <a href="https://www.paypal.com/ncp/payment/USHYKP6TWRM5Q" class="cta-button cta-secondary">Faire un don</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem">
+        <div class="container">
+            <h2 class="section-title">Le Problème</h2>
+            <div class="problem-content">
+                <div class="problem-text">
+                    <h3>Un Marché Assoiffé, Une Dépendance Coûteuse</h3>
+                    <p>Le marché de Bukavu consomme 1,6 million de litres par mois d'huile d'arachide mais dépend de plus de 85% d'importations coûteuses et de qualité incertaine. Cela entraîne une fuite de capitaux et prive la région de valeur ajoutée locale.</p>
+                    <p>Zéro production locale industrielle d'huile d'arachide à Bukavu</p>
+                    <p>Manque de débouchés aux producteurs locaux : tonnes d'arachides vendues brutes sans valeur ajoutée</p>
+                </div>
+                <div class="problem-visual">
+                    <div class="chart-container">
+                        <canvas id="importChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution">
+        <div class="container">
+            <h2 class="section-title">Notre Solution</h2>
+            <div class="solution-content">
+                <div class="solution-visual">
+                    <div class="product-showcase">
+                        <div class="product-card">
+                            <img src="https://z-cdn-media.chatglm.cn/files/72de5450-c2a5-4105-8f9a-83eb9541b05d_1763158333554%20%281%29.jpg?auth_key=1864048031-f6a7621f57fe4f56ae5455ac0bfc2316-0-9e9bacd2c0f6ee97a8a51407cef79a06" alt="Kivu Oil 1L">
+                            <div class="product-info">
+                                <h4>Kivu Oil 1L</h4>
+                                <p>Huile d'arachide 100% pure</p>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="https://z-cdn-media.chatglm.cn/files/f79e6723-64ce-4710-9af3-fa25c706a9e6_1763158678896.jpg?auth_key=1864048031-9890ba96d3bd4e5d875827030336ee46-0-9b4a7a6e9c7dd02ef10bbd9e923d0947" alt="Kivu Oil 20L">
+                            <div class="product-info">
+                                <h4>Kivu Oil 20L</h4>
+                                <p>Format professionnel pour les entreprises</p>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-info">
+                                <h4>Formats Disponibles</h4>
+                                <p>500ml, 1L, 5L, 20L</p>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-info">
+                                <h4>Avantages</h4>
+                                <p>10-15% moins cher que les importations premium</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution-text">
+                    <h3>Huile d'Arachide 100% Locale, Pure & Accessible</h3>
+                    <p>Production semi-industrielle : qualité constante, volumes réguliers</p>
+                    <p>Huile pure, non raffinée : bienfaits nutritionnels préservés (vitamine E, antioxydants)</p>
+                    <p>Partenariat direct avec agriculteurs du Sud-Kivu : approvisionnement stable + impact social</p>
+                    <p>Fraîcheur & Traçabilité : Production locale = délai champs → consommateur <2 semaines</p>
+                    
+                    <div class="advantages">
+                        <div class="advantage-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>Qualité industrielle locale</div>
+                        </div>
+                        <div class="advantage-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>Intégration verticale</div>
+                        </div>
+                        <div class="advantage-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>Branding identitaire fort</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Opportunity Section -->
+    <section id="investment" class="investment">
+        <div class="container">
+            <h2 class="section-title">Opportunité d'Investissement</h2>
+            <div class="investment-content">
+                <div class="investment-details">
+                    <div class="investment-text">
+                        <h3>Investissez dans l'Avenir Agro-Industriel de la RDC</h3>
+                        <p>Besoin : 125 000 $ pour lancer la production</p>
+                        <p>Offre : 33% de parts (Equity) ou Prêt + Equity</p>
+                        <p>ROI projeté : 78% sur 3 ans, seuil de rentabilité dès le 8ème mois</p>
+                        <p>Potentiel de marché : 35 Millions $ par an (Bukavu & Goma)</p>
+                        <p>Marché Bukavu : 19,5M$</p>
+                        <p>Pénétration Année 3 : 2%</p>
+                    </div>
+                    <div class="investment-visual">
+                        <div class="funding-breakdown">
+                            <h3>Répartition des Fonds</h3>
+                            <div class="funding-item">
+                                <div class="funding-label">
+                                    <span>Équipements & Infrastructure</span>
+                                    <span>52%</span>
+                                </div>
+                                <div class="funding-bar" style="width: 52%;"></div>
+                            </div>
+                            <div class="funding-item">
+                                <div class="funding-label">
+                                    <span>Fonds de Roulement</span>
+                                    <span>32%</span>
+                                </div>
+                                <div class="funding-bar" style="width: 32%;"></div>
+                            </div>
+                            <div class="funding-item">
+                                <div class="funding-label">
+                                    <span>Marketing & Lancement</span>
+                                    <span>8%</span>
+                                </div>
+                                <div class="funding-bar" style="width: 8%;"></div>
+                            </div>
+                            <div class="funding-item">
+                                <div class="funding-label">
+                                    <span>Légal & Administratif</span>
+                                    <span>4%</span>
+                                </div>
+                                <div class="funding-bar" style="width: 4%;"></div>
+                            </div>
+                            <div class="funding-item">
+                                <div class="funding-label">
+                                    <span>Réserve de Contingence</span>
+                                    <span>4%</span>
+                                </div>
+                                <div class="funding-bar" style="width: 4%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="metrics">
+                    <div class="metric-card">
+                        <div class="metric-value">78%</div>
+                        <div class="metric-label">TRI projeté sur 3 ans</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">240%</div>
+                        <div class="metric-label">ROI cumulé 3 ans</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">8 mois</div>
+                        <div class="metric-label">Seuil de rentabilité</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">4-6x</div>
+                        <div class="metric-label">Multiple de sortie potentiel</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <h2 class="section-title">Feuille de Route</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Préparation (Mois 1-3)</h3>
+                        <p>Sécurisation financement et local</p>
+                        <p>Commande & installation équipements</p>
+                        <p>Recrutement équipe de base</p>
+                        <p>Finalisation contrats agriculteurs</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Lancement (Mois 4-6)</h3>
+                        <p>Démarrage production & tests qualité</p>
+                        <p>Premiers 20 points de vente partenaires</p>
+                        <p>Lancement commercial Bukavu</p>
+                        <p>Objectif: 5 000 litres vendus</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Croissance (Mois 7-12)</h3>
+                        <p>Montée en régime: 11 440 litres/mois</p>
+                        <p>Extension: 50+ points de vente</p>
+                        <p>Prospection Goma (reconnaissance terrain)</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Expansion (Année 2-3)</h3>
+                        <p>Pénétration Goma</p>
+                        <p>500 000 litres/an production</p>
+                        <p>2% de part de marché Bukavu + Goma</p>
+                        <p>Exploration nouvelles provinces</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Questions Fréquemment Posées</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Quels sont les risques du projet et comment sont-ils mitigés ?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous avons identifié plusieurs risques et mis en place des stratégies de mitigation :</p>
+                        <ul>
+                            <li>Approvisionnement arachides : Contrats multi-coopératives, stock tampon 3 mois, prix plancher garantis</li>
+                            <li>Coupures électriques : Générateur de secours (8h), planning production flexible</li>
+                            <li>Fluctuations taux de change : Pricing mixte USD/CDF, revenus partiellement en USD</li>
+                            <li>Concurrence importations : Différenciation qualité + local, veille tarifaire continue</li>
+                            <li>Insécurité régionale : Localisation Bukavu stable, assurance équipements</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Comment les investisseurs peuvent-ils sortir de leur investissement ?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous avons prévu plusieurs stratégies de sortie pour nos investisseurs :</p>
+                        <ul>
+                            <li>Rachat par groupe agro-industriel régional (An 5-7)</li>
+                            <li>Expansion et levée Série A (valorisation $3-5M)</li>
+                            <li>Rachat par l'équipe de direction (Management buyout)</li>
+                        </ul>
+                        <p>Multiple de sortie potentiel : 4-6x en 5 ans</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Quel est l'impact social du projet ?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Notre projet a un impact social significatif :</p>
+                        <ul>
+                            <li>200+ agriculteurs soutenus (Année 1)</li>
+                            <li>12 emplois directs créés (Année 3)</li>
+                            <li>Substitution de $500K importations</li>
+                            <li>Valorisation des produits locaux</li>
+                            <li>Formation aux meilleures pratiques agricoles</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Quelles sont les certifications prévues pour le produit ?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous prévoyons d'obtenir plusieurs certifications pour garantir la qualité et la conformité de notre produit :</p>
+                        <ul>
+                            <li>Certification OCC (Office Congolais de Contrôle)</li>
+                            <li>Conformité normes sanitaires internationales</li>
+                            <li>ISO 22000</li>
+                            <li>Codex Alimentarius</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Pitch Deck Section -->
+    <section class="download">
+        <div class="container">
+            <div class="download-content">
+                <h3>Téléchargez notre Pitch Deck Complet</h3>
+                <p>Obtenez toutes les informations détaillées sur notre projet, nos projections financières et notre équipe.</p>
+                <a href="#" class="cta-button cta-primary" onclick="downloadPitchDeck()">Télécharger le Pitch Deck</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Payment Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact & Paiement</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Pour nous contacter</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>Email : mac-drc@outlook.fr</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>Téléphone : +243 994 780 251</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>Localisation : Bukavu, RD Congo</div>
+                    </div>
+                </div>
+                <div class="payment-options">
+                    <h3>Pour soutenir le projet</h3>
+                    <div class="payment-card">
+                        <h4>Faire un don</h4>
+                        <p>Soutenez notre impact social en contribuant au développement de l'agriculture locale et à la création d'emplois.</p>
+                        <a href="https://www.paypal.com/ncp/payment/USHYKP6TWRM5Q" class="cta-button cta-primary">Faire un don</a>
+                    </div>
+                    <div class="payment-card">
+                        <h4>Investir</h4>
+                        <p>Rejoignez-nous en tant qu'investisseur et participez à la croissance de ce projet prometteur avec un TRI projeté de 78%.</p>
+                        <a href="https://www.paypal.com/ncp/payment/USHYKP6TWRM5Q" class="cta-button cta-primary">Investir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slogan">« Ensemble, construisons la souveraineté alimentaire de la RDC »</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>À Propos</h3>
+                    <ul>
+                        <li><a href="#problem">Le Problème</a></li>
+                        <li><a href="#solution">Notre Solution</a></li>
+                        <li><a href="#investment">Opportunité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="#" onclick="downloadPitchDeck()">Pitch Deck</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#roadmap">Feuille de Route</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Email: mac-drc@outlook.fr</li>
+                        <li>Téléphone: +243 994 780 251</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Matunda ya Afrika Company. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Chart.js for import vs local production
+        const ctx = document.getElementById('importChart').getContext('2d');
+        const importChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Importations (85%)', 'Production Locale (15%)'],
+                datasets: [{
+                    data: [85, 15],
+                    backgroundColor: [
+                        '#E6B800',
+                        '#4A7C59'
+                    ],
+                    borderColor: [
+                        '#CC9900',
+                        '#6B9F7F'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Répartition du marché d\'huile à Bukavu',
+                        font: {
+                            size: 16
+                        }
+                    }
+                }
+            }
+        });
+
+        // FAQ Accordion
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            
+            answer.classList.toggle('active');
+            icon.classList.toggle('active');
+        }
+
+        // Language Toggle
+        function toggleLanguage() {
+            // This would normally toggle between French and English content
+            // For this demo, we'll just show an alert
+            alert('Le site bilingue sera bientôt disponible!');
+        }
+
+        // Download Pitch Deck
+        function downloadPitchDeck() {
+            // This would normally trigger a download of the pitch deck
+            // For this demo, we'll just show an alert
+            alert('Le Pitch Deck complet sera bientôt disponible pour téléchargement!');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.timeline-item, .metric-card, .product-card');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                
+                if (elementTop < window.innerHeight && elementBottom > 0) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Initial setup for animation
+        document.querySelectorAll('.timeline-item, .metric-card, .product-card').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.5s, transform 0.5s';
+        });
+    </script>
+</body>
+</html>
